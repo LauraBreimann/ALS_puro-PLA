@@ -50,8 +50,10 @@ for(f=0; f<files.length; f++) {
 			saveAs(".tif", output + File.separator + fullName + "_DAPI" + ".tif");
 			close();
 			
-			//select and save Puro-PLA channel
+			//select and save GFP channel
 			selectWindow("C2-" + fullName);
+			rename(fullName + "_C2");
+			selectWindow(fullName + "_C2");
 			run("Duplicate...", "duplicate");
 			run("Grays");
 			resetMinAndMax();
@@ -60,7 +62,7 @@ for(f=0; f<files.length; f++) {
 			
 			
 			//make max projection of GFP channel
-			selectWindow(fullName + "_C2" + "-1");
+			selectWindow(fullName + "_C2");
 			run("Z Project...", "projection=[Max Intensity]");
 			resetMinAndMax();
 			run("Grays");
@@ -69,10 +71,8 @@ for(f=0; f<files.length; f++) {
 						
 									
 			
-			//select and save GFP channel
+			//select and save puro-PLA channel
 			selectWindow("C3-" + fullName);
-			rename(fullName + "_C3");
-			selectWindow(fullName + "_C3");
 			resetMinAndMax();
 			run("Grays");
 			saveAs(".tif", output + File.separator + fullName + "_C3" + ".tif");
