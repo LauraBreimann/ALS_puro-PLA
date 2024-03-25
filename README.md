@@ -23,7 +23,9 @@
 Use the [Fiji](https://fiji.sc/) macro ```open_lif_split_gfp_max.ijm``` script to open a set of .lif files, split the channels and resave them as single tiff files. The script also renames the files, for this, the script exprects these channels in this order: 1. DAPI, 2. Puro-PLA, 3. Map2-GFP. The script also saves a max projection of the GFP channel, which may be used to create a binary mask.
   
   
- ### 2.	Mask creation using Ilastik
+ ### 2.	Mask creation using X
+
+TODO : update mask creating steps
   
 [Ilastik](https://www.ilastik.org/) can be used to create a binary mask to filter the Puro-PLA detections. Since neurons are pretty flat, mask are creeated from max projections of the GFP  channel. The ```Autocontex``` workflow uses pixel classification to segement the cell boundaries. For this cells are segemented in two rounds. After innitial training, similar images can be processed together in the batch mode. To export the masks, select the ```Simple segmentation``` output format and tiff as file format. 
     
