@@ -4,7 +4,7 @@
 //===============================================================================
 #@ File (label = "Input directory", style = "directory") input
 #@ File (label = "Output directory", style = "directory") output
-#@ String (label = "File suffix", value = ".tiff") suffix
+#@ String (label = "File suffix", value = ".tif") suffix
 
 
 processFolder(input);
@@ -30,18 +30,34 @@ function processFile(input, output, file) {
 	
 	//make a binary mask
 	setAutoThreshold("Otsu");
+
 	//run("Threshold...");
 	//setThreshold(0, 1);
 	run("Convert to Mask");
+	
+	run("Invert");
 	
 	
 	//Smooth out the mask a bit, first remove some small bits and then dilate the connected shapes. 
 	//This part depends a bit on the quality of the inital mask and might need to be adapted. 
 	run("Erode");
+	run("Dilate");
 	run("Close-");
-	run("Erode");
+	//run("Erode");
 	run("Close-");
 	run("Dilate");
+	//run("Fill Holes");
+	
+	
+	
+	// Set a threshold for particle analysis
+    //setThreshold(1, 255);
+	
+	// Remove small spots by applying a size filter
+	run("Analyze Particles...", "size=100-Infinity circularity=0-1 show=Masks");
+
+	// Get the resulting binary mask image
+	//binaryMask = getTitle();
 	
 	//divide by 255 so that the values are 0 and 1 
 	run("Divide...", "value=255.000");
