@@ -41,9 +41,9 @@ function processFile(input, output, file) {
 	close("blur");
 	selectWindow(file);
 	//optional smoothing command if camera noise is visible in the images
-	//run("Smooth");
 	close(file);
 	// save new image to folder and close the windows
+	run("Smooth", "stack");
 	print("Saving to: " + output);
 	saveAs("Tiff", output + File.separator +  file);
 	selectWindow(file);
