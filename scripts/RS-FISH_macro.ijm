@@ -18,15 +18,15 @@ dir = getDirectory("Select a directory containing Puro-PLA images.");
 
 //////// Define RS parameters: //////////
 
-anisotropy = 1.00; 			// anisotropy coefficient
-sigmaDoG = 1.1365; 			// sigma
-thresholdDoG = 0.019901777; // intensity threshold
+anisotropy = 0.8040; 			// anisotropy coefficient
+sigmaDoG = 1.5; 			// sigma
+thresholdDoG = 0.007; // intensity threshold
 supportRadius = 3; 			// support radius
-inlierRatio = 0.146			// min inlier ratio
+inlierRatio = 0.1			// min inlier ratio
 maxError = 1.5; 		// max error
-intensityThreshold=30000;  		// spot intensity threshold
+intensityThreshold=0;  		// spot intensity threshold
 imMin=0;   					// min image intentisy
-imMax=65500;  				// max image intensity
+imMax=5000;  				// max image intensity
 
 
 
