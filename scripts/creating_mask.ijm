@@ -1,5 +1,5 @@
 //===============================================================================
-// Creates a binary mask from a ilastik output tiff file
+// Creates a binary mask from a labkit output tiff file
 //  - Laura Breimann
 //===============================================================================
 #@ File (label = "Input directory", style = "directory") input
