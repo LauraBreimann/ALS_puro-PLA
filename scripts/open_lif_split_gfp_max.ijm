@@ -40,7 +40,7 @@ for(f=0; f<files.length; f++) {
 			//split channels 
 			run("Split Channels");
 			
-			// the follwing code exprects a 3 channel image stack with the order of DAPI, Puro-PLA, Map2 GFP
+			// the follwing code exprects a 3 channel image stack with the order of DAPI, Map2 GFP and Puro-PLA
 			// adapt the follwing code if the order is different in the images
 			
 			//select and save DAPI channel
