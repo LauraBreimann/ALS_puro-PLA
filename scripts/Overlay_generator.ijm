@@ -20,7 +20,7 @@ function processFile(input) {
 	ypoints = Table.getColumn("y");
 	makeSelection("point small red circle", xpoints, ypoints); //creates overlays from the XY coordinates, here small red circles
 	
-// open the ROI manager and add the overlay as an object so it can be manioulated further, this can be commented out		
+// open the ROI manager and add the overlay as an object so it can be manipulated further, this can be commented out		
 run("ROI Manager...");
 roiManager("Add");	
 
