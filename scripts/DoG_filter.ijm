@@ -1,5 +1,5 @@
 //===============================================================================
-// Removes background in the smFISH images using a Difference of Gaussian (DoG) filter 
+// Removes background in the Puro-PLA images using a Difference of Gaussian (DoG) filter 
 // - Laura Breimann - 
 //===============================================================================
 
