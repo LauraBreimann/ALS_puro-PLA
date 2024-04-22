@@ -1,6 +1,6 @@
 //===============================================================================
 // Macro to detect all Puro-PLA spots in the image using RS-FISH
-// - Laura Breimann - 
+// - Laura Breimann - adapted from Ella Bahry 
 //===============================================================================
 
 // This macro script runs the radial symmetry (RS) FIJI plug-in on all the images in all the sub-directories of the defined dir
@@ -55,13 +55,8 @@ function processImage(dirPath, imName) {
 	
 	open("" + dirPath + imName);
 
-	// save result as csv file with the image file name and a selection of parameters used for detection
-	results_csv_path = "" + dirPath + imName + " sigma=" + sigmaDoG + 
-	" threshold=" + thresholdDoG + 
-	" supportRadius=" + supportRadius + 
-	" min_inlier_ratio=" + inlierRatio +  
-	" max_error=" + maxError + ".csv";
-	
+	// save result as csv file 
+	results_csv_path = "" + dirPath + imName + ".csv";
 	
 	
 	
