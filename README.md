@@ -7,7 +7,7 @@
 ### Pipeline
 
 * _**1.	Tiff file extraction from lif files**_
-* _**2.	Mask creation using Ilastik**_
+* _**2.	Mask creation using labkit**_
 * _**3.	Mask refinement and area detection using Fiji**_
 * _**4.	Puro-PLA analysis using RS-FISH**_
 * _**5.	Mask filtering**_
