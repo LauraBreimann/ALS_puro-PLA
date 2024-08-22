@@ -4,6 +4,11 @@
 
 </div>
 
+This image analysis pipeline is part of the following publication: 
+
+_Kuegelgen N von, Ludwik K, Mendonsa S, Roemer C, Becher E, Breimann L, Strauch M, Mari T, Mongellaz S, Zuckerman B, Grexa N, Oliveras-Martinez A, Woehler A, Selbach M, Bella VL, Ulitsky I, Chekulaeva M. Neuromuscular dysfunction in patient-derived FUSR244RR-ALS iPSC model via axonal downregulation of neuromuscular junction proteins. [bioRxiv. 2024;2024.08.17.607965](https://www.biorxiv.org/content/10.1101/2024.08.17.607965v1?ct=)._
+
+
 ### Pipeline
 
 * _**1.	Tiff file extraction from lif files**_
